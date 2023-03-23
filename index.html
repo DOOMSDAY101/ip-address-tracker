@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="author" content="Sulaiman Ifeoluwa">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+  integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+  crossorigin=""/>
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+ integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+ crossorigin=""></script>
+  <script src="jquery-3.6.3.min.js"></script>
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+</head>
+<body>
+<header class="hero-section">
+  <h1>IP Address Tracker</h1>
+
+  <div class="input-session">
+    <input type="text" id="ip-address-no" placeholder="Search for any ip address">
+    <button type="button" class="submit-button" onclick="getLocation()"></button>
+    <p></p>
+  </div>
+
+  <div class="details">
+    <!--loading animation-->
+    <div class="loader">
+      <div class="loader-image"></div>
+      <p>tracking...</p>
+    </div>
+    
+    <div class="inner-content">
+
+      <div class="content-details">
+        <h3>IP ADDRESS</h3>
+        <p class="ip-address-value"></p>
+      </div>
+
+      <div class="content-details">
+        <h3>LOCATION</h3>
+        <p class="location-value"></p>
+      </div>
+
+      <div class="content-details">
+        <h3>TIMEZONE</h3>
+        <p class="timezone-value"></p>
+      </div>
+
+      <div class="content-details">
+        <h3>ISP</h3>
+        <P class="isp-value"></P>
+      </div>
+    </div>
+
+  </div>
+
+</header>
+<main id="map">
+  <div class="pin-location" title="pin Location">
+
+  </div>
+</main>
+</body>
+<script src="script.js"></script>
+</html>
